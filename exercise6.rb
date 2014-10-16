@@ -32,7 +32,7 @@ when "1"
 	if grocery_list.length == 0 
 		puts "There is nothing on your list my dear"
 	else
-	show_list(grocery_list)
+		show_list(grocery_list)
 	end
 when "2"
 	puts "What would you like to add the list?"

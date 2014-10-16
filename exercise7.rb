@@ -15,7 +15,7 @@ def class_expand (hash, percent)
 	hash.each do|key, value|
 		hash[key] = (value.to_i*(100+percent))/100
 	end
-		display (hash)
+	display (hash)
 end
 
 puts "Welcome to Bitmaker Labs, what would you like to do?"
@@ -37,31 +37,30 @@ until option.to_i>=1 && option.to_i<=4 do
 end
 
 case option
-	when "1"
-		display(students)
+when "1"
+	display(students)
 
-	when "2"
-		puts "Please enter the number of students in the next cohort:"
-		number=gets.chomp
-		students[:cohort4]=number.to_i
-		display(students)
+when "2"
+	puts "Please enter the number of students in the next cohort:"
+	number=gets.chomp
+	students[:cohort4]=number.to_i
+	display(students)
 
-	when "3"
-		puts "Please choose which cohort to be removed:"
-		display(students)
-		removal="cohort"+gets.chomp
-		key=removal.to_sym
-		students.delete(key)
-		puts"#{key.to_s} is removed!"
-		display(students)
-	when"4"
-		puts "Please enter the percentage of expansion:"
-		percent=gets.chomp.to_i
-		class_expand(students, percent)
+when "3"
+	puts "Please choose which cohort to be removed:"
+	display(students)
+	removal="cohort"+gets.chomp
+	key=removal.to_sym
+	students.delete(key)
+	puts"#{key.to_s} is removed!"
+	display(students)
+when"4"
+	puts "Please enter the percentage of expansion:"
+	percent=gets.chomp.to_i
+	class_expand(students, percent)
 
-		
+	
 
-		
+	
 end
 
-		
